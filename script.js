@@ -11,6 +11,7 @@ button.addEventListener('click',(e) => {
     while(container.firstChild){
         container.removeChild(container.firstChild);
     }
+    container.appendChild(button);
     createGrid(input);
 })
 
@@ -30,7 +31,6 @@ function Rows(columns){
 }
 
 function createGrid(rows = 16){
-    container.appendChild(button);
     for(let i=0;i<rows;i++){
        container.appendChild(Rows(rows)); 
     }
